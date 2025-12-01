@@ -9,7 +9,6 @@ main {
 
 .login-container {
     display: flex;
-    gap: 16px;
     flex-direction: column;
     background-color: #fff;
     width: 450px;
@@ -32,7 +31,7 @@ input {
 }
 
 input:focus {
-    border-color: #0aa8c3;
+    border-color: burlywood;
     transition: border 0.3s ease;
 }
 
@@ -41,16 +40,16 @@ input:last-child {
 }
 
 .btn-log-in {
-    background-color: #0aa8c3;
+    background-color: peru;
     font-size: 16px;
-    color: #fff;
+    color: #000;
     cursor: pointer;
     border: none;
     padding: 16px;
 }
 
 .btn-log-in:hover {
-    background-color: #50d8f0;
+    background-color: burlywood;
     transition: background-color 0.3s ease;
 }
 

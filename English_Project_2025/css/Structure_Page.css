@@ -21,6 +21,9 @@ header {
     align-items: center;
     padding: 30px;
     background-color: pink;
+    background-image: url(../img/header-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header a img {
@@ -41,6 +44,7 @@ nav ul li {
 /* MAIN */
 main {
     display: flex;
+    flex-direction: column;
     flex-grow: 1;
     width: 100%;
 }

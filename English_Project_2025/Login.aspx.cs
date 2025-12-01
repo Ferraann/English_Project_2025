@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SQLite;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,56 +13,57 @@ namespace English_Project_2025
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string username = TextBox1.Text.Trim();
-            string password = TextBox2.Text.Trim();
-
-            string dbPath = Server.MapPath("~/users.db");
-            string connectionString = $"Data Source={dbPath};Version=3;";
-            string query = "SELECT isDoctor, dni FROM users WHERE username = @Username AND password = @Password";
-
             try
             {
-                using (var connection = new SQLiteConnection(connectionString))
+                string BDpath = "C:\\Users\\Usuario\\source\\repos\\English_Project_2025\\English_Project_2025\\bin\\users.db";
+                string username = UsernameTextBox.Text.Trim();
+                string password = PasswordTextBox.Text.Trim();
+
+                using (SQLiteConnection conn = new SQLiteConnection("Data Source=" + BDpath + ";Version=3;"))
                 {
-                    connection.Open();
-                    using (var command = new SQLiteCommand(query, connection))
+                    conn.Open();
+
+                    string query = "SELECT profile FROM users WHERE username = @username AND password = @password";
+
+                    using (SQLiteCommand comm = new SQLiteCommand(query, conn))
                     {
-                        command.Parameters.AddWithValue("@Username", username);
-                        command.Parameters.AddWithValue("@Password", password);
+                        comm.Parameters.AddWithValue("@username", username);
+                        comm.Parameters.AddWithValue("@password", password);
 
-                        using (var reader = command.ExecuteReader())
+                        // Uso de ExecuteScalar() para obtener un único valor (profile).
+                        object result = comm.ExecuteScalar();
+
+                        if (result != null)
                         {
-                            if (reader.Read())
+                            string profile = result.ToString();
+
+                            if (profile.Equals("recepcionista"))
                             {
-                                int isDoctor = reader.GetInt32(0);
-                                string dni = reader.GetString(1);
-
-                                Session["username"] = username;
-                                Session["password"] = password;
-                                Session["dni"] = dni;
-
-                                if (isDoctor == 1)
-                                {
-                                    Session["role"] = "Doctor";
-                                    Response.Redirect("~/Doctor.aspx");
-                                }
-                                else
-                                {
-                                    Session["role"] = "Patient";
-                                    Response.Redirect("~/Patient.aspx");
-                                }
+                                Response.Redirect("Recepcionista.aspx");
+                            }
+                            else if (profile.Equals("cliente"))
+                            {
+                                Response.Redirect("Cliente.aspx");
                             }
                             else
                             {
-                                LabelMessage.Text = "Invalid username or password.";
+                                LabelMessage.ForeColor = System.Drawing.Color.Orange;
+                                LabelMessage.Text = "Perfil desconocido.";
                             }
                         }
+                        else
+                        {
+                            LabelMessage.ForeColor = System.Drawing.Color.Red;
+                            LabelMessage.Text = "Invalid username or password.";
+                        }
                     }
+
+                    conn.Close();
                 }
             }
             catch (Exception ex)
