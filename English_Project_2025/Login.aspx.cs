@@ -18,11 +18,12 @@ namespace English_Project_2025
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            string username = UsernameTextBox.Text.Trim();
+            string password = PasswordTextBox.Text.Trim();
+
             try
             {
-                string BDpath = "C:\\Users\\Usuario\\source\\repos\\English_Project_2025\\English_Project_2025\\bin\\users.db";
-                string username = UsernameTextBox.Text.Trim();
-                string password = PasswordTextBox.Text.Trim();
+                string BDpath = Server.MapPath("~/English_Project_2025/App_Data/users.db");
 
                 using (SQLiteConnection conn = new SQLiteConnection("Data Source=" + BDpath + ";Version=3;"))
                 {
@@ -35,18 +36,19 @@ namespace English_Project_2025
                         comm.Parameters.AddWithValue("@username", username);
                         comm.Parameters.AddWithValue("@password", password);
 
-                        // Uso de ExecuteScalar() para obtener un único valor (profile).
                         object result = comm.ExecuteScalar();
 
                         if (result != null)
                         {
                             string profile = result.ToString();
 
-                            if (profile.Equals("recepcionista"))
+                            User user = new User(username, password, profile);
+
+                            if (user.Profile == "recepcionista")
                             {
                                 Response.Redirect("Recepcionista.aspx");
                             }
-                            else if (profile.Equals("cliente"))
+                            else if (user.Profile == "cliente")
                             {
                                 Response.Redirect("Cliente.aspx");
                             }
@@ -58,9 +60,10 @@ namespace English_Project_2025
                         }
                         else
                         {
-                            LabelMessage.ForeColor = System.Drawing.Color.Red;
+                            LabelMessage.ForeColor = System.Drawing.Color.Orange;
                             LabelMessage.Text = "Invalid username or password.";
                         }
+
                     }
 
                     conn.Close();
