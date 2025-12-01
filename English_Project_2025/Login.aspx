@@ -1,6 +1,9 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="English_Project_2025.Login" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
     <meta charset="utf-8" />
     <title>Login Hotel | English Project 2025 @ Javier Acevedo Y Ferran Sansaloni</title>
     <link href="css/Structure_Page.css" rel="stylesheet" />
@@ -12,8 +15,6 @@
         <a href="#"> <img src="img/logo.png" alt="Hotel Logo" /> </a>
         <nav>
             <ul>
-                <li></li>
-                <li></li>
                 <li><a href="#"><h3>Log in</h3></a></li>
             </ul>
         </nav>
@@ -22,8 +23,8 @@
     <main>  
         <div class="login-container">
             <h1>Log In</h1>
-            <form action="" method="post">
-                <input id="POST-email" type="email" name="email" placeholder="Email" />
+            <form action="Login.aspx.cs" method="post">
+                <input id="POST-userna e" type="text" name="username" placeholder="Username" />
                 <input id="POST-password" type="password" name="password" placeholder="Password" />
                 <input class="btn-log-in" type="submit" value="Log In" />
                 <label id="error"></label>
@@ -33,6 +34,5 @@
     </main>
 
     <footer>&copy; All rights reserved | 2025</footer>
-
 </body>
 </html>
