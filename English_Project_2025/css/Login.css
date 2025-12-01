@@ -1,6 +1,6 @@
 ﻿
 main {
-    background-color: #2d3533;
+    background-color: beige;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -42,7 +42,7 @@ input:last-child {
 .btn-log-in {
     background-color: peru;
     font-size: 16px;
-    color: #000;
+    color: #fff;
     cursor: pointer;
     border: none;
     padding: 16px;
@@ -54,12 +54,13 @@ input:last-child {
 }
 
 form a {
-    text-align: center;
+    display: inline;
     color: #7b7b7b;
     text-decoration: none;
+    align-self: center;
 }
 
-form a:hover {
-    text-decoration: underline 2px;
-    text-underline-offset: 2px;
-}
+    form a:hover {
+        text-decoration: underline 2px;
+        text-underline-offset: 2px;
+    }

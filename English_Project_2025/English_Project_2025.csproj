@@ -78,7 +78,6 @@
     <Content Include="img\footer-img.jpg" />
     <Content Include="img\header-img.png" />
     <Content Include="img\main-img.jpg" />
-    <Content Include="img\header-img.jpg" />
     <Content Include="img\logo.png" />
     <Content Include="js\Login.js" />
     <Content Include="Login.aspx" />
