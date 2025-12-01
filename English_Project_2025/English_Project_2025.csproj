@@ -71,7 +71,11 @@
     <Content Include="css\Login.css" />
     <Content Include="css\Structure_Page.css" />
     <Content Include="Homepage.aspx" />
+    <Content Include="img\imagenMapa.png" />
     <Content Include="img\logo.png" />
+    <Content Include="img\suiteDeluxe.png" />
+    <Content Include="img\suiteParejas.png" />
+    <Content Include="img\suitePresidencial.png" />
     <Content Include="js\Login.js" />
     <Content Include="Login.aspx" />
     <Content Include="Web.config" />
@@ -86,7 +90,6 @@
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>

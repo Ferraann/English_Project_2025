@@ -1,5 +1,212 @@
-﻿/* MAIN */
-main {
-    background-color: mediumpurple;
+﻿/* =========================================
+   PALETA DE COLORES
+========================================= */
+:root {
+    --navy: #0A1C2E;
+    --gold: #C9A66B;
+    --white: #ffffff;
+    --light: #f5f5f5;
 }
-/* END MAIN */
+
+/* =========================================
+   RESET GENERAL
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--white);
+    color: var(--navy);
+    overflow-x: hidden;
+}
+
+/* =========================================
+   REPARAR PROBLEMA DE LAYOUT HORIZONTAL
+========================================= */
+
+main {
+    display: block !important;
+    width: 100%;
+    background-color: beige;
+}
+
+    main * {
+        display: block;
+        width: 100%;
+    }
+
+section {
+    margin: 0 auto;
+    padding: 60px 10%;
+    width: 100%;
+}
+
+/* =========================================
+   TITULOS GENERALES
+========================================= */
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--navy);
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+/* =========================================
+   BOTONES
+========================================= */
+
+.btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    width: fit-content;
+    margin: 20px auto 0;
+}
+
+/* =========================================
+   SOBRE EL HOTEL
+========================================= */
+
+.about {
+    text-align: center;
+}
+
+.about-img {
+    height: 350px;
+    border-radius: 20px;
+    background: url("https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&q=80&w=1200") center/cover no-repeat;
+    margin-bottom: 25px;
+}
+
+/* =========================================
+   SERVICIOS
+========================================= */
+
+.features .feature {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+    background: var(--white);
+}
+
+/* =========================================
+   HABITACIONES
+========================================= */
+.room-description {
+    display: flex;
+    gap: 30px;
+    color:
+}
+
+
+.room-card {
+    display:flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: burlywood;
+}
+
+.room-img {
+    height: 200px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    background-size: cover;
+    background-position: center;
+}
+
+.room1 {
+    background-image: url("../img/suiteDeluxe.png");
+}
+
+.room2 {
+    background-image: url("../img/suitePresidencial.png");
+}
+
+.room3 {
+    background-image: url("../img/suiteParejas.png");
+}
+
+/* =========================================
+   EXPERIENCIAS
+========================================= */
+
+.exp-card {
+    height: 220px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 25px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: end;
+    padding: 20px;
+    font-size: 1.2rem;
+    text-shadow: 0px 2px 5px black;
+}
+
+.exp1 {
+    background-image: url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&q=80&w=1200");
+}
+
+.exp2 {
+    background-image: url("https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&q=80&w=1200");
+}
+
+.exp3 {
+    background-image: url("https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&q=80&w=1200");
+}
+
+.exp4 {
+    background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&q=80&w=1200");
+}
+
+/* =========================================
+   RESEÑAS
+========================================= */
+
+.reviews {
+    background: var(--light);
+    text-align: center;
+}
+
+.review {
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+}
+
+/* =========================================
+   UBICACIÓN
+========================================= */
+
+.map-container {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+    .map-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+
