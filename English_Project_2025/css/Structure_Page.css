@@ -23,10 +23,10 @@ header {
     background-color: pink;
 }
 
-    header a img {
-        height: 60px;
-        width: auto;
-    }
+header a img {
+    height: 60px;
+    width: auto;
+}
 
 nav ul {
     display: flex;
@@ -42,6 +42,7 @@ nav ul li {
 main {
     display: flex;
     flex-grow: 1;
+    width: 100%;
 }
 /* END MAIN */
 
