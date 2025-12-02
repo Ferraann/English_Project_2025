@@ -7,13 +7,17 @@ namespace English_Project_2025
 {
     public class User
     {
-        public string Username { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string Email { get; set; }
         public string Password { get; set; }
         public string Profile { get; set; }
 
-        public User(string username, string password, string profile)
+        public User(string name, string surname, string email, string password, string profile)
         {
-            Username = username;
+            Name = name;
+            Surname = surname;
+            Email = email;
             Password = password;
             Profile = profile;
         }

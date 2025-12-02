@@ -1,0 +1,10 @@
+﻿nav ul li {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+li a img {
+    height: 40px;
+    width: auto;
+}

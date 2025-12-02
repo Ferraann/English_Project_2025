@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta charset="utf-8" />
-    <title>Login Hotel | English Project 2025 @ Javier Acevedo Y Ferran Sansaloni</title>
+    <title>Login Hotel | English Project 2025 @ Javier Acevedo AND Ferran Sansaloni</title>
     <link href="css/Structure_Page.css" rel="stylesheet" />
     <link href="css/Login.css" rel="stylesheet" />
 </head>

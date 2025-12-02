@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Recepcionista.aspx.cs" Inherits="English_Project_2025.Recepcionista" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Recepcionist.aspx.cs" Inherits="English_Project_2025.Recepcionista" %>
 
 <!DOCTYPE html>
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
@@ -17,39 +18,57 @@ namespace English_Project_2025
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string username = UsernameTextBox.Text.Trim();
+            string email = UsernameTextBox.Text.Trim();
             string password = PasswordTextBox.Text.Trim();
 
             try
             {
                 string BDpath = Server.MapPath("~/bin/users.db");
+
+                string name = null;
+                string surname = null;
+                string profile = null;
+                bool userFound = false;
+
                 using (SQLiteConnection conn = new SQLiteConnection("Data Source=" + BDpath + ";Version=3;"))
                 {
                     conn.Open();
 
-                    string query = "SELECT profile FROM users WHERE username = @username AND password = @password";
+                    string query = "SELECT profile, name, surname FROM users WHERE email = @email AND password = @password";
 
                     using (SQLiteCommand comm = new SQLiteCommand(query, conn))
                     {
-                        comm.Parameters.AddWithValue("@username", username);
+                        comm.Parameters.AddWithValue("@email", email);
                         comm.Parameters.AddWithValue("@password", password);
 
-                        object result = comm.ExecuteScalar();
-
-                        if (result != null)
+                        using (SQLiteDataReader reader = comm.ExecuteReader())
                         {
-                            string profile = result.ToString();
-                            LabelMessage.Text = profile;
-
-                            User user = new User(username, password, profile);
-
-                            if (user.Profile == "recepcionista")
+                            if (reader.Read())
                             {
-                                Response.Redirect("Recepcionista.aspx");
+                                profile = reader["profile"].ToString();
+                                name = reader["name"].ToString();
+                                surname = reader["surname"].ToString();
+                                userFound = true;
                             }
-                            else if (user.Profile == "cliente")
+                        }
+
+                        if (userFound)
+                        {
+                            User user = new User(name, surname, email, password, profile);
+
+                            Session["Name"] = name;
+                            Session["Surname"] = surname;
+                            Session["Email"] = email;
+                            Session["Password"] = password;
+                            Session["Profile"] = profile;
+
+                            if (user.Profile == "recepcionist")
                             {
-                                Response.Redirect("Cliente.aspx");
+                                Response.Redirect("Recepcionist.aspx");
+                            }
+                            else if (user.Profile == "client")
+                            {
+                                Response.Redirect("Client.aspx");
                             }
                             else
                             {
@@ -67,7 +86,7 @@ namespace English_Project_2025
             }
             catch (Exception ex)
             {
-                LabelMessage.Text = "An error occurred while connecting to the database.";
+                LabelMessage.Text = "An error occurred while connecting to the database. Error: " + ex.Message;
             }
         }
     }
