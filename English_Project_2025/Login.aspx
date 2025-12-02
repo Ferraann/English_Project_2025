@@ -27,7 +27,7 @@
                 <asp:TextBox ID="UsernameTextBox" runat="server" Placeholder="Username"></asp:TextBox>
                 <asp:TextBox ID="PasswordTextBox" runat="server" TextMode="Password" Placeholder="Password"></asp:TextBox>
                 <asp:Button ID="Button1" class="btn-log-in" runat="server" Text="Login" OnClick="Button1_Click" />
-                <asp:Label ID="LabelMessage" runat="server" ForeColor="Red"></asp:Label>
+                <asp:Label ID="LabelMessage" runat="server"></asp:Label>
                 <a href="#">Forgot password?</a>
             </form>
         </div>

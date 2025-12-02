@@ -53,6 +53,11 @@ input:last-child {
     transition: background-color 0.3s ease;
 }
 
+#LabelMessage {
+    color: orange;
+    text-align: center;
+}
+
 form a {
     display: inline;
     color: #7b7b7b;

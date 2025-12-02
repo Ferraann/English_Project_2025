@@ -13,7 +13,6 @@ namespace English_Project_2025
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -23,8 +22,7 @@ namespace English_Project_2025
 
             try
             {
-                string BDpath = Server.MapPath("~/English_Project_2025/App_Data/users.db");
-
+                string BDpath = Server.MapPath("~/bin/users.db");
                 using (SQLiteConnection conn = new SQLiteConnection("Data Source=" + BDpath + ";Version=3;"))
                 {
                     conn.Open();
@@ -41,6 +39,7 @@ namespace English_Project_2025
                         if (result != null)
                         {
                             string profile = result.ToString();
+                            LabelMessage.Text = profile;
 
                             User user = new User(username, password, profile);
 
@@ -54,16 +53,13 @@ namespace English_Project_2025
                             }
                             else
                             {
-                                LabelMessage.ForeColor = System.Drawing.Color.Orange;
                                 LabelMessage.Text = "Perfil desconocido.";
                             }
                         }
                         else
                         {
-                            LabelMessage.ForeColor = System.Drawing.Color.Orange;
-                            LabelMessage.Text = "Invalid username or password.";
+                            LabelMessage.Text = "Usuario o contraseña incorrectos.";
                         }
-
                     }
 
                     conn.Close();
