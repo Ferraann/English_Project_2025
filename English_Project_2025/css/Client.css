@@ -8,3 +8,23 @@ li a img {
     height: 40px;
     width: auto;
 }
+
+#LabelName {
+    font-size: 20px;
+    color: peru;
+}
+
+.info_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto;
+    padding: 30px;
+    background-color: peru;
+    max-height: 70%;
+    max-width: 900px;
+    width: 90%;
+    height: 500px;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

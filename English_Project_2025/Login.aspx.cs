@@ -25,8 +25,12 @@ namespace English_Project_2025
             {
                 string BDpath = Server.MapPath("~/bin/users.db");
 
+                string userId = null;
                 string name = null;
                 string surname = null;
+                string dob = null;
+                string address = null;
+                string mobile = null;
                 string profile = null;
                 bool userFound = false;
 
@@ -34,7 +38,7 @@ namespace English_Project_2025
                 {
                     conn.Open();
 
-                    string query = "SELECT profile, name, surname FROM users WHERE email = @email AND password = @password";
+                    string query = "SELECT id, profile, name, surname, DOB, address, mobile FROM users WHERE email = @email AND password = @password";
 
                     using (SQLiteCommand comm = new SQLiteCommand(query, conn))
                     {
@@ -45,19 +49,27 @@ namespace English_Project_2025
                         {
                             if (reader.Read())
                             {
-                                profile = reader["profile"].ToString();
+                                userId = reader["id"].ToString();
                                 name = reader["name"].ToString();
                                 surname = reader["surname"].ToString();
+                                dob = reader["DOB"].ToString();
+                                address = reader["address"].ToString();
+                                mobile = reader["mobile"].ToString();
+                                profile = reader["profile"].ToString();
                                 userFound = true;
                             }
                         }
 
                         if (userFound)
                         {
-                            User user = new User(name, surname, email, password, profile);
+                            User user = new User(name, surname, dob, address, mobile, email, password, profile);
 
+                            Session["UserID"] = userId;
                             Session["Name"] = name;
                             Session["Surname"] = surname;
+                            Session["DOB"] = dob;
+                            Session["Address"] = address;
+                            Session["Mobile"] = mobile;
                             Session["Email"] = email;
                             Session["Password"] = password;
                             Session["Profile"] = profile;

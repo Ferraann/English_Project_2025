@@ -23,7 +23,17 @@
 </header>
 
 <main>  
-    
+    <div class="content_container">
+        <div class="info-container_1">
+            <div class="name">
+                <h3>Name:</h3>
+                <label>Name</label>
+            </div>
+        </div>
+        <div class="info-container_2">
+
+        </div>
+    </div>    
 </main>
 
 <footer>&copy; All rights reserved | 2025</footer>
