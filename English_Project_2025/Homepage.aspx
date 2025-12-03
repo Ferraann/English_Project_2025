@@ -10,18 +10,152 @@
     <link href="css/Homepage.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
+ <header>
     <a href="#"> <img src="img/logo.png" alt="Hotel Logo" /> </a>
     <nav>
         <ul>
-            <li></li>
-            <li></li>
             <li><a href="#"><h3>Log in</h3></a></li>
         </ul>
     </nav>
 </header>
 
-<main> sadfasdf </main>
+<main>
+
+    <!-- SOBRE EL HOTEL -->
+    <section class="about">
+        <div class="about-img"></div>
+        <div class="about-text">
+            <h2>Welcome to Grand Arrow</h2>
+            <p>
+                A hotel where elegance and comfort come together to offer you an unforgettable experience.
+                Enjoy our premium facilities, personalized service, and a unique atmosphere.
+            </p>
+            <a href="#" class="btn-primary">My Bookings</a>
+        </div>
+    </section>
+
+    <!-- SERVICIOS / ESPACIOS -->
+<section class="features">
+    <h2 class="section-title">Our Spaces & Amenities</h2>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+            <div class="feature-bar"></div>
+            <h3>Infinity Pool</h3>
+            <p>Relax with spectacular sunset views.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-bar"></div>
+            <h3>Gourmet Restaurant</h3>
+            <p>Unique flavors crafted by renowned chefs.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-bar"></div>
+            <h3>Spa & Wellness</h3>
+            <p>A space designed for wellness and relaxation.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-bar"></div>
+            <h3>24/7 Gym</h3>
+            <p>Modern, high-end equipment</p>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- HABITACIONES -->
+    <section class="rooms">
+        <h2 class="section-title">Nuestras Habitaciones</h2>
+        <div class="room-description">
+            <div class="room-card">
+                <div class="room-img room1"></div>
+                <h3>Deluxe Suite</h3>
+                <p>Spacious and elegant, overlooking the Madrid forest.</p>
+            </div>
+
+            <div class="room-card">
+                <div class="room-img room2"></div>
+                <h3>Presidential Suite</h3>
+                <p>Maximum comfort and exclusivity.</p>
+            </div>
+
+            <div class="room-card">
+                <div class="room-img room3"></div>
+                <h3>Double Room</h3>
+                <p>Perfect for couples.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCIAS -->
+    <section class="experiences">
+        <h2 class="section-title">Unforgettable Experiences</h2>
+
+        <div class="exp-card exp1">Gourmet Cooking Classes</div>
+        <div class="exp-card exp2">Private Tours</div>
+        <div class="exp-card exp3">Luxury Massages</div>
+        <div class="exp-card exp4">Exclusive Wine Tastings</div>
+    </section>
+
+   <!-- RESEÑAS -->
+<!-- RESEÑAS -->
+<section class="reviews">
+    <h2 class="section-title">Hear from Our Guests</h2>
+
+    <!-- Valoración media centrada -->
+    <div class="reviews-average">
+        <div class="stars-average">⭐⭐⭐⭐⭐</div>
+        <p>5/5 – based on 50,000 reviews</p>
+    </div>
+
+    <div class="reviews-grid">
+
+        <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>“Incredible experience, we can’t wait to come back.”</p>
+        </div>
+
+        <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>“Super attentive staff and perfect facilities.”</p>
+        </div>
+
+        <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>“Hi, I’m Ferran. The wine tasting was amazing!”</p>
+        </div>
+
+        <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>“Excellent attention, and the spa is simply marvelous.”</p>
+        </div>
+
+    </div>
+</section>
+
+
+
+    <!-- UBICACIÓN -->
+   <section class="location">
+    <h2 class="section-title">Our Location</h2>
+
+    <div class="map-container">
+        <img 
+            src="img/imagenMapa.png" 
+            alt="Mapa con ubicación del hotel">
+    </div>
+    </section>
+
+
+
+</main>
+
+
 
 <footer>&copy; All rights reserved | 2025</footer>
 </body>
