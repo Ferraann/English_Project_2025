@@ -49,13 +49,48 @@ section {
    TITULOS GENERALES
 ========================================= */
 
+/* ==== TITULOS CON DOS LINEAS DORADAS METÁLICAS ==== */
+
 .section-title {
-    text-align: center;
     font-size: 2rem;
+    text-align: center;
     color: var(--navy);
-    margin-bottom: 40px;
-    width: 100%;
+    margin: 60px 0 50px;
+    position: relative;
+    display: inline-block;
+    padding: 20px 0;
+    font-weight: bold;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
+    /* Línea superior */
+    .section-title::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, #C9A66B, #FFD966, #C9A66B);
+        border-radius: 3px;
+        box-shadow: 0 0 6px rgba(201, 166, 107, 0.6);
+    }
+
+    /* Línea inferior */
+    .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, #C9A66B, #FFD966, #C9A66B);
+        border-radius: 3px;
+        box-shadow: 0 0 6px rgba(201, 166, 107, 0.6);
+    }
+
+
 
 /* =========================================
    BOTONES
@@ -92,14 +127,64 @@ section {
    SERVICIOS
 ========================================= */
 
-.features .feature {
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    padding: 25px;
-    margin-bottom: 25px;
-    text-align: center;
-    background: var(--white);
+.features {
+    background-color beige;
+    padding: 60px 10%;
 }
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.feature-card {
+    background: var(--white);
+    border-radius: 18px;
+    padding: 25px 20px 35px;
+    text-align: center;
+    border: 1px solid #ddd;
+    transition: 0.3s ease;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.05);
+    position: relative;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+
+
+.feature-card:hover {
+    transform: scale(1.04);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.18);
+}
+
+
+/* Barra decorativa elegante */
+.feature-bar {
+    width: 60px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 4px;
+    margin: 0 auto 20px;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+    border-color: var(--gold);
+}
+
+.feature-card h3 {
+    color: var(--navy);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #444;
+    font-size: 0.95rem;
+}
+
 
 /* =========================================
    HABITACIONES
@@ -107,18 +192,17 @@ section {
 .room-description {
     display: flex;
     gap: 30px;
-    color:
 }
 
 
 .room-card {
-    display:flex;
+    display: flex;
     flex-direction: column;
     border: 1px solid #ddd;
     margin-bottom: 25px;
     border-radius: 15px;
     text-align: center;
-    background-color: burlywood;
+    background-color: var(--gold);
 }
 
 .room-img {
@@ -141,6 +225,17 @@ section {
     background-image: url("../img/suiteParejas.png");
 }
 
+
+.room-card {
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.room-card:hover {
+    transform: scale(1.04);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.18);
+}
+
+
 /* =========================================
    EXPERIENCIAS
 ========================================= */
@@ -161,34 +256,95 @@ section {
 }
 
 .exp1 {
-    background-image: url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&q=80&w=1200");
+    background-image: url("../img/Chef.png");
 }
 
 .exp2 {
-    background-image: url("https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&q=80&w=1200");
+    background-image: url("../img/guia.png");
 }
 
 .exp3 {
-    background-image: url("https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&q=80&w=1200");
+    background-image: url("../img/masaje.png");
 }
 
 .exp4 {
-    background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&q=80&w=1200");
+    background-image: url("../img/vinos.png");
 }
+
+
+.exp-card {
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.exp-card:hover {
+    transform: scale(1.04);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.18);
+}
+
 
 /* =========================================
    RESEÑAS
 ========================================= */
-
 .reviews {
-    background: var(--light);
-    text-align: center;
+    background-color: beige;
+    padding: 60px 10%;
 }
 
-.review {
-    margin-bottom: 25px;
+/* Valoración media centrada y separada */
+.reviews-average {
+    text-align: center;
+    margin-bottom: 50px; /* espacio grande antes de las tarjetas */
     font-size: 1.2rem;
+    color: var(--navy);
 }
+
+.stars-average {
+    font-size: 1.5rem; /* estrellas más grandes */
+    color: var(--gold);
+    display: inline-block;
+    margin-bottom: 8px; /* separación entre estrellas y texto */
+}
+
+.reviews-average p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+
+/* Grid de reseñas */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    justify-items: center; /* centra las tarjetas */
+}
+
+/* Tarjetas de reseñas */
+.review-card {
+    background: var(--white);
+    padding: 25px 20px;
+    border-left: 4px solid var(--gold); /* detalle premium */
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.05); /* sombra MUY suave */
+    transition: background .3s ease; /* solo cambia el fondo al hover */
+}
+
+    /* Hover elegante: solo cambia el fondo */
+    .review-card:hover {
+        background: #f9d886;
+    }
+
+
+
+.review-card p {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+
+
 
 /* =========================================
    UBICACIÓN

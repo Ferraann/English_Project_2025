@@ -25,39 +25,48 @@
     <section class="about">
         <div class="about-img"></div>
         <div class="about-text">
-            <h2>Bienvenido a Grand Arrow</h2>
+            <h2>Welcome to Grand Arrow</h2>
             <p>
-                Un hotel donde la elegancia y el confort se unen para ofrecerte una experiencia inolvidable.
-                Disfruta de nuestras instalaciones premium, atención personalizada y un ambiente único.
+                A hotel where elegance and comfort come together to offer you an unforgettable experience.
+                Enjoy our premium facilities, personalized service, and a unique atmosphere.
             </p>
-            <a href="#" class="btn-primary">Mis reservas</a>
+            <a href="#" class="btn-primary">My Bookings</a>
         </div>
     </section>
 
-    <!-- SERVICIOS -->
-    <section class="features">
-        <h2 class="section-title">Nuestros Espacios</h2>
+    <!-- SERVICIOS / ESPACIOS -->
+<section class="features">
+    <h2 class="section-title">Our Spaces & Amenities</h2>
 
-        <div class="feature">
-            <h3> Piscina Infinity</h3>
-            <p>Relájate con vistas espectaculares al atardecer.</p>
+    <div class="features-grid">
+
+        <div class="feature-card">
+            <div class="feature-bar"></div>
+            <h3>Infinity Pool</h3>
+            <p>Relax with spectacular sunset views.</p>
         </div>
 
-        <div class="feature">
-            <h3> Restaurante Gourmet</h3>
-            <p>Sabores únicos preparados por chefs de prestigio.</p>
+        <div class="feature-card">
+            <div class="feature-bar"></div>
+            <h3>Gourmet Restaurant</h3>
+            <p>Unique flavors crafted by renowned chefs.</p>
         </div>
 
-        <div class="feature">
-            <h3> Spa & Wellness</h3>
-            <p>Un espacio pensado para el bienestar y la desconexión.</p>
+        <div class="feature-card">
+            <div class="feature-bar"></div>
+            <h3>Spa & Wellness</h3>
+            <p>A space designed for wellness and relaxation.</p>
         </div>
 
-        <div class="feature">
-            <h3> Gimnasio 24h</h3>
-            <p>Equipamiento de última generación.</p>
+        <div class="feature-card">
+            <div class="feature-bar"></div>
+            <h3>24/7 Gym</h3>
+            <p>Modern, high-end equipment</p>
         </div>
-    </section>
+
+    </div>
+</section>
+
 
     <!-- HABITACIONES -->
     <section class="rooms">
@@ -65,52 +74,75 @@
         <div class="room-description">
             <div class="room-card">
                 <div class="room-img room1"></div>
-                <h3>Suite Deluxe</h3>
-                <p>Amplia, elegante y con vistas a la selva madrileña.</p>
+                <h3>Deluxe Suite</h3>
+                <p>Spacious and elegant, overlooking the Madrid forest.</p>
             </div>
 
             <div class="room-card">
                 <div class="room-img room2"></div>
-                <h3>Suite Presidencial</h3>
-                <p>Máximo confort y exclusividad.</p>
+                <h3>Presidential Suite</h3>
+                <p>Maximum comfort and exclusivity.</p>
             </div>
 
             <div class="room-card">
                 <div class="room-img room3"></div>
-                <h3>Habitación Doble</h3>
-                <p>Ideal para viajes en pareja.</p>
+                <h3>Double Room</h3>
+                <p>Perfect for couples.</p>
             </div>
         </div>
     </section>
 
     <!-- EXPERIENCIAS -->
     <section class="experiences">
-        <h2 class="section-title">Experiencias Únicas</h2>
+        <h2 class="section-title">Unforgettable Experiences</h2>
 
-        <div class="exp-card exp1">Clases de cocina</div>
-        <div class="exp-card exp2">Visitas guiadas</div>
-        <div class="exp-card exp3">Masajes premium</div>
-        <div class="exp-card exp4">Catas de vino</div>
+        <div class="exp-card exp1">Gourmet Cooking Classes</div>
+        <div class="exp-card exp2">Private Tours</div>
+        <div class="exp-card exp3">Luxury Massages</div>
+        <div class="exp-card exp4">Exclusive Wine Tastings</div>
     </section>
 
-    <!-- RESEÑAS -->
-    <section class="reviews">
-        <h2 class="section-title">Lo que dicen nuestros huéspedes</h2>
+   <!-- RESEÑAS -->
+<!-- RESEÑAS -->
+<section class="reviews">
+    <h2 class="section-title">Hear from Our Guests</h2>
 
-        <div class="review">
-            ⭐⭐⭐⭐⭐  
-            <p>“Una experiencia increíble, volveremos sin duda.”</p>
+    <!-- Valoración media centrada -->
+    <div class="reviews-average">
+        <div class="stars-average">⭐⭐⭐⭐⭐</div>
+        <p>5/5 – based on 50,000 reviews</p>
+    </div>
+
+    <div class="reviews-grid">
+
+        <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>“Incredible experience, we can’t wait to come back.”</p>
         </div>
 
-        <div class="review">
-            ⭐⭐⭐⭐⭐  
-            <p>“El personal súper atento y las instalaciones perfectas.”</p>
+        <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>“Super attentive staff and perfect facilities.”</p>
         </div>
-    </section>
+
+        <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>“Hi, I’m Ferran. The wine tasting was amazing!”</p>
+        </div>
+
+        <div class="review-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>“Excellent attention, and the spa is simply marvelous.”</p>
+        </div>
+
+    </div>
+</section>
+
+
 
     <!-- UBICACIÓN -->
    <section class="location">
-    <h2 class="section-title">Ubicación</h2>
+    <h2 class="section-title">Our Location</h2>
 
     <div class="map-container">
         <img 
