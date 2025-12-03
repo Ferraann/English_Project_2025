@@ -12,7 +12,7 @@ namespace English_Project_2025
         protected void Page_Load(object sender, EventArgs e)
         {
             Session.Clear();
-            Response.Redirect("Login.aspx");
+            Response.Redirect("Homepage.aspx");
         }
     }
 }

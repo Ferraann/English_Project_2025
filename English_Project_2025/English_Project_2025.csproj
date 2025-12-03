@@ -71,8 +71,10 @@
     <Content Include="Client.aspx" />
     <Content Include="css\Client.css" />
     <Content Include="css\Homepage.css" />
+    <Content Include="css\HomepageLoged.css" />
     <Content Include="css\Login.css" />
     <Content Include="css\Structure_Page.css" />
+    <Content Include="HomepageLoged.aspx" />
     <Content Include="Homepage.aspx" />
     <Content Include="img\footer-img.jpg" />
     <Content Include="img\header-img.png" />
@@ -90,6 +92,13 @@
     </Compile>
     <Compile Include="Client.aspx.designer.cs">
       <DependentUpon>Client.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomepageLoged.aspx.cs">
+      <DependentUpon>HomepageLoged.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomepageLoged.aspx.designer.cs">
+      <DependentUpon>HomepageLoged.aspx</DependentUpon>
     </Compile>
     <Compile Include="Homepage.aspx.cs">
       <DependentUpon>Homepage.aspx</DependentUpon>
@@ -120,6 +129,7 @@
     <Compile Include="Recepcionist.aspx.designer.cs">
       <DependentUpon>Recepcionist.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Reservation.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>

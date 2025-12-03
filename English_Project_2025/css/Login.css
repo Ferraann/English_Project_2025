@@ -10,10 +10,12 @@ main {
 .login-container {
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    background-color: #f3d898;
     width: 450px;
+    border: 2px solid gold;
     border-radius: 10px;
     padding: 32px;
+    box-shadow: 0 4px 4px rgba(240, 190, 0, 0.3);
 }
 
 form {
@@ -23,16 +25,24 @@ form {
 }
 
 input {
+    color: goldenrod;
     padding: 16px 8px;
-    border: 2px solid #ccc;
+    border: 2px solid gold;
     border-radius: 5px;
     outline: none;
     font-size: 16px;
 }
 
+input::placeholder {
+    color: goldenrod;
+}
+
 input:focus {
-    border-color: burlywood;
+    border-color: goldenrod;
     transition: border 0.3s ease;
+}
+h1 {
+    color: peru;
 }
 
 input:last-child {

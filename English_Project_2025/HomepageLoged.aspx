@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Homepage.aspx.cs" Inherits="English_Project_2025.Homepage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomepageLoged.aspx.cs" Inherits="English_Project_2025.HomepageLoged" %>
 
 <!DOCTYPE html>
 
@@ -7,14 +7,18 @@
     <meta charset="utf-8" />
     <title>Homepage Hotel | English Project 2025 @ Javier Acevedo Y Ferran Sansaloni</title>
     <link href="css/Structure_Page.css" rel="stylesheet" />
+    <link href="css/HomepageLoged.css" rel="stylesheet" />
     <link href="css/Homepage.css" rel="stylesheet" />
 </head>
 <body>
- <header>
+<header>
     <a href="#"> <img src="img/logo.png" alt="Hotel Logo" /> </a>
     <nav>
         <ul>
-            <li><a href="Login.aspx"><h3>Log in</h3></a></li>
+            <li>
+                <asp:Label ID="LabelNameLoged" Text="text" runat="server" />
+                <a href="Logout.aspx" id="logout"> <img src="img/logout.png" alt="Logout icon" /> </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -30,7 +34,7 @@
                 A hotel where elegance and comfort come together to offer you an unforgettable experience.
                 Enjoy our premium facilities, personalized service, and a unique atmosphere.
             </p>
-            <a href="Login.aspx" class="btn-primary">My Bookings</a>
+            <a href="Client.aspx" class="btn-primary">My Bookings</a>
         </div>
     </section>
 
