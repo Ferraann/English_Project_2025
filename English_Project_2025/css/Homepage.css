@@ -128,7 +128,7 @@ section {
 ========================================= */
 
 .features {
-    background-color beige;
+    background-color: beige;
     padding: 60px 10%;
 }
 
@@ -331,9 +331,9 @@ section {
 }
 
     /* Hover elegante: solo cambia el fondo */
-    .review-card:hover {
-        background: #f9d886;
-    }
+.review-card:hover {
+    background: #f9d886;
+}
 
 
 
@@ -358,11 +358,11 @@ section {
     margin-top: 20px;
 }
 
-    .map-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-    }
+.map-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
 
