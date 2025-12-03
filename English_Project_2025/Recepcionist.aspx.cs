@@ -11,7 +11,15 @@ namespace English_Project_2025
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Name"] != null)
+            {
+                // LabelClientName.Text = Session["Name"].ToString();
+                LabelName.Text = Session["Name"].ToString();
+            }
+            else
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
     }
 }

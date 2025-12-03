@@ -7,6 +7,14 @@ main {
     align-items: center;
 }
 
+.btn-login a{
+    background-color: #808080;
+}
+
+.btn-login a:hover {
+    background-color: #808080;
+}
+
 .login-container {
     display: flex;
     flex-direction: column;

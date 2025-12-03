@@ -39,6 +39,21 @@ nav ul {
 nav ul li {
     list-style: none;
 }
+
+.btn-login a {
+    display: flex;
+    width: auto;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 32px;
+    background-color: peru;
+    color: #fff;
+}
+
+.btn-login a:hover {
+    background-color: burlywood;
+    transition: background-color 0.3s ease;
+}
 /* END HEADER */
 
 

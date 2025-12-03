@@ -14,7 +14,7 @@
     <a href="#"> <img src="img/logo.png" alt="Hotel Logo" /> </a>
     <nav>
         <ul>
-            <li><a href="Login.aspx"><h3>Log in</h3></a></li>
+            <li class="btn-login"><a href="Login.aspx"><h3>Log in</h3></a></li>
         </ul>
     </nav>
 </header>
