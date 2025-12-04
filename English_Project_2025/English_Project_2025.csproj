@@ -81,6 +81,7 @@
     <Content Include="img\header-img.png" />
     <Content Include="img\main-img.jpg" />
     <Content Include="img\logo.png" />
+    <Content Include="js\RecepcionistActions.js" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="Recepcionist.aspx" />

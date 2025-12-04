@@ -75,3 +75,8 @@ li a img {
     background-color: pink;
     border-radius: 16px;
 }
+
+.action-panel:nth-child(1), 
+.action-panel:nth-child(3) {
+    display: none;
+}
