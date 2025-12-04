@@ -7,7 +7,7 @@
     <title>Recepcionist Page Hotel | English Project @ Javier Acevedo y Ferran Sansaloni</title>
     <link href="css/Structure_Page.css" rel="stylesheet" />
     <link href="css/Recepcionist.css" rel="stylesheet" />
-    <script src="js/RecepcionistActions.js"></script>
+    <script src="js/RecepcionistActions.js" defer></script>
 </head>
 <body>
     <header>
@@ -25,7 +25,6 @@
     <main>  
         <div class="content_container">
             <h2>Recepcionist Dashboard</h2>
-            <p>Select an action:</p>
             <div class="actions-container">
                 <a id="action-add-user" href="#"><h4>Add User</h4></a>
                 <span class="separator"></span>
@@ -44,7 +43,7 @@
             <div id="delete-user" class="action-panel">
                 delete user
             </div>
-        </div>    
+        </div> 
     </main>
 
     <footer>&copy; All rights reserved | 2025</footer>
