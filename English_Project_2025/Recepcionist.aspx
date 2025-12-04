@@ -55,7 +55,7 @@
                     <div class="searcher">
                         <asp:TextBox ID="searcherTextBox" runat="server" Placeholder="Search a user"></asp:TextBox>
                         <asp:Button ID="SearchButton" CssClass="searchBtn" runat="server" Text="" OnClick="searchBtn_Click" />
-                    </div>
+                </div>
 
                     <h2 class="section-title" id="H2SectionTitle" runat="server">Personal Data</h2> 
 
@@ -97,7 +97,9 @@
                     <h2 class="section-title" id="H2ReservationsTitle" runat="server">My reservations</h2>
 
                     <div class="info-container_2" id="PanelReservations" runat="server">
-                        <div id="ReservationsContainer" runat="server"></div>
+                        <div id="ReservationsContainer" runat="server">
+
+                        </div>
                     </div>
                 </div>
             </form>
