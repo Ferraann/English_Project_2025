@@ -77,7 +77,53 @@ li a img {
     color: #000;
 }
 
-.action-panel:nth-child(1), 
-.action-panel:nth-child(3) {
-    display: none;
+
+
+#form1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px 80px;
+}
+
+input {
+    color: goldenrod;
+    padding: 16px 9px;
+    border: 2px solid gold;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+input::placeholder {
+    color: goldenrod;
+}
+
+input:focus {
+    border-color: goldenrod;
+    transition: border 0.3s ease;
+}
+
+input:last-child {
+    border: none;
+}
+
+.btn-add-user {
+    background-color: #C9A66B;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 16px;
+}
+
+.btn-add-user:hover {
+    background-color: burlywood;
+    transition: background-color 0.3s ease;
+}
+
+#LabelMessage {
+    color: goldenrod;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

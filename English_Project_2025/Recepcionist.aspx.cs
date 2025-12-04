@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Linq;
 using System.Web;
 using System.Web.Services.Description;
@@ -22,13 +23,49 @@ namespace English_Project_2025
             }
         }
 
-        public void Change_action()
+        public void Button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string BDpath = Server.MapPath("~/bin/users.db");
 
+                using (SQLiteConnection conn = new SQLiteConnection("Data Source=" + BDpath + ";Version=3;"))
+                {
+                    conn.Open();
+
+                    string nameField = NameTextBox.Text;
+                    string surnameField = SurnameTextBox.Text;
+                    string DOBField = DOBTextBox.Text.ToString();
+                    string phoneField = PhoneTextBox.Text.ToString();
+                    string addressField = AddressTextBox.Text.ToString();
+                    string profileField = ProfileTextBox.Text.ToString();
+                    string emailField = EmailTextBox.Text.ToString();
+                    string passwordField = PasswordTextBox.Text.ToString();
+
+
+                    User user = new User(nameField, surnameField, DOBField, addressField, phoneField,
+                                emailField, passwordField, profileField);
+
+                    user.AddUser(user);
+
+                    NameTextBox.Text = "";
+                    SurnameTextBox.Text = "";
+                    DOBTextBox.Text = "";
+                    PhoneTextBox.Text = "";
+                    AddressTextBox.Text = "";
+                    ProfileTextBox.Text = "";
+                    EmailTextBox.Text = "";
+                    PasswordTextBox.Text = "";
+
+                    LabelMessage.Text = "User added";
+
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                LabelMessage.Text = "Adding user failed: " + ex.Message;
+            }
         }
     }
 }
-
-/*  pillar los id y hacer qeu si se clica display none a los divs que no queremos y display flex a los 
- *  que si dejar un display flex de añadir reserva como predefinido.
- */

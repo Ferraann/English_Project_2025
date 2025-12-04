@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <a href="Homepage.aspx"> <img src="img/logo.png" alt="Hotel Logo" /> </a>
+        <a href="Homepageloged.aspx"> <img src="img/logo.png" alt="Hotel Logo" /> </a>
         <nav>
             <ul>
                 <li>
@@ -34,9 +34,34 @@
 
                 <a id="action-delete-user" href="#"><h4>Delete User</h4></a>
             </div>
+
+
+
+
+
             <div id="add-user" class="action-panel">
-                add user
+
+                <form id="form1" runat="server">
+                    <asp:TextBox ID="NameTextBox" runat="server" Placeholder="Name"></asp:TextBox>
+                    <asp:TextBox ID="SurnameTextBox" runat="server" Placeholder="Surname"></asp:TextBox>
+                    <asp:TextBox ID="DOBTextBox" runat="server" Placeholder="Date of born"></asp:TextBox>
+                    <asp:TextBox ID="PhoneTextBox" runat="server" Placeholder="Phone"></asp:TextBox>
+                    <asp:TextBox ID="AddressTextBox" runat="server" Placeholder="Address"></asp:TextBox>
+                    <asp:TextBox ID="ProfileTextBox" runat="server" Placeholder="Profile"></asp:TextBox>
+                    <asp:TextBox ID="EmailTextBox" runat="server" Placeholder="Email"></asp:TextBox>
+                    <asp:TextBox ID="PasswordTextBox" runat="server" Placeholder="Password"></asp:TextBox>
+
+                    <asp:Button ID="Button1" class="btn-add-user" runat="server" Text="+ Add User" OnClick="Button1_Click" />
+                    <asp:Label ID="LabelMessage" runat="server"></asp:Label>
+
+                </form>
             </div>
+
+
+
+
+
+
             <div id="add-reservation" class="action-panel">
                 add reservation
             </div>
