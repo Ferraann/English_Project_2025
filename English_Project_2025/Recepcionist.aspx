@@ -32,6 +32,7 @@
             </div>
 
             <form id="form1" runat="server">
+                <asp:HiddenField ID="ActivePanel" runat="server" Value="Add" />
                 <div id="add-user" class="action-panel">
 
                 
@@ -51,13 +52,14 @@
                 </div>
 
                 <div id="search-user" class="action-panel">
-                    <h2 class="section-title">Personal Data</h2>
-
                     <div class="searcher">
                         <asp:TextBox ID="searcherTextBox" runat="server" Placeholder="Search a user"></asp:TextBox>
-                        <a href="#"> <img src="img/search.png" alt="Search icon" /> </a>
+                        <asp:Button ID="SearchButton" CssClass="searchBtn" runat="server" Text="" OnClick="searchBtn_Click" />
                     </div>
-                     <div class="info-container">           
+
+                    <h2 class="section-title" id="H2SectionTitle" runat="server">Personal Data</h2> 
+
+                     <div class="info-container" id="PanelUserInfo" runat="server">           
                         <div class="name">
                         <h3>Name:</h3>
                         <asp:Label ID="LabelClientName" Text="i" runat="server"></asp:Label>
@@ -89,16 +91,15 @@
                     </div>        
                     </div>
 
-                    <span class="separator"></span>
+                    <span class="separator" id="SeparatorDiv" runat="server"></span>
        
 
-                    <h2 class="section-title">My reservations</h2>
+                    <h2 class="section-title" id="H2ReservationsTitle" runat="server">My reservations</h2>
 
-                    <div class="info-container_2">
+                    <div class="info-container_2" id="PanelReservations" runat="server">
                         <div id="ReservationsContainer" runat="server"></div>
                     </div>
                 </div>
-                
             </form>
         </div> 
     </main>

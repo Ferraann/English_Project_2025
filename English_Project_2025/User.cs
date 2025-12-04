@@ -148,5 +148,56 @@ namespace English_Project_2025
                 throw new Exception("Error deleting user: " + ex.Message);
             }
         }
+
+
+        public static User GetUserByEmail(string email)
+        {
+            User user = null;
+
+            try
+            {
+                string BDpath = HttpContext.Current.Server.MapPath("~/bin/users.db");
+
+                using (SQLiteConnection conn = new SQLiteConnection("Data Source=" + BDpath + ";Version=3;"))
+                {
+                    conn.Open();
+
+                    string query = @"SELECT id, name, surname, DOB, address, mobile, email, password, profile 
+                                     FROM users 
+                                     WHERE email = @email";
+
+                    using (SQLiteCommand comm = new SQLiteCommand(query, conn))
+                    {
+                        comm.Parameters.AddWithValue("@email", email);
+
+                        using (SQLiteDataReader reader = comm.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                user = new User(
+                                    Convert.ToInt32(reader["id"]),
+                                    reader["name"].ToString(),
+                                    reader["surname"].ToString(),
+                                    reader["DOB"].ToString(),
+                                    reader["address"].ToString(),
+                                    reader["mobile"].ToString(),
+                                    reader["email"].ToString(),
+                                    reader["password"].ToString(),
+                                    reader["profile"].ToString()
+                                );
+                            }
+                        }
+                    }
+
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error retrieving user by email: " + ex.Message);
+            }
+
+            return user;
+        }
     }
 }

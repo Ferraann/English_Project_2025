@@ -68,9 +68,50 @@ namespace English_Project_2025
             }
         }
 
-        public void SearchButton_Click(object sender, EventArgs e)
+        public void searchBtn_Click(object sender, EventArgs e)
         {
+            string searchEmail = searcherTextBox.Text.Trim();
 
+            if (string.IsNullOrEmpty(searchEmail))
+            {
+                LabelMessage.Text = "Please enter an email address to search.";
+                return;
+            }
+
+            try
+            {
+                User foundUser = English_Project_2025.User.GetUserByEmail(searchEmail);
+
+                if (foundUser != null)
+                {
+                    LabelClientName.Text = foundUser.Name;
+                    LabelClientSurname.Text = foundUser.Surname;
+                    LabelClientDOB.Text = foundUser.DOB;
+                    LabelClientPhone.Text = foundUser.Mobile;
+                    LabelClientAddress.Text = foundUser.Address;
+                    LabelClientEmail.Text = foundUser.Email;
+
+                    PanelUserInfo.Style["display"] = "grid";
+
+                    SeparatorDiv.Style["display"] = "block"; 
+
+                    H2SectionTitle.Style["display"] = "block";
+
+                    PanelReservations.Style["display"] = "block";
+
+
+
+                    LabelMessage.Text = $"User '{foundUser.Name} {foundUser.Surname}' found.";
+                }
+                else
+                {
+                    LabelMessage.Text = $"No user found with email: {searchEmail}";
+                }
+            }
+            catch (Exception ex)
+            {
+                LabelMessage.Text = "Search failed due to a database error: " + ex.Message;
+            }
         }
     }
 }

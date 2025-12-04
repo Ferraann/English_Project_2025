@@ -127,7 +127,6 @@ input:last-child {
 }
 
 
-
 .searcher {
     display: flex;
     justify-content: center;
@@ -156,7 +155,6 @@ input:last-child {
     height: 90%;
     width: auto;
 }
-
 
 #search-user {
     display: flex;
