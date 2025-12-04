@@ -125,3 +125,73 @@ input:last-child {
     align-items: center;
     justify-content: center;
 }
+
+
+
+.searcher {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 600px;
+    height: 50%;
+}
+
+#searcherTextBox {
+    width: 400px;
+}
+
+.searchBtn {
+    background-color: beige;
+    padding: 16px 16px;
+    border: 2px solid gold;
+    border-radius: 5px;
+    width: 20px;
+}
+
+.searchBtn:hover {
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+
+#search-user {
+    display: flex;
+    flex-direction: column;
+}
+
+#search-user h2 {
+    text-align: center;
+}
+
+#search-user h2 {
+    display: none;
+}
+
+#search-user > .separator {
+    display: none;
+}
+
+.info-container {
+    display: none;
+}
+
+.reservation-card {
+    display: flex;
+    gap: 20px;
+    margin: 25px;
+    padding: 0 10px;
+}
+
+#ReservationsContainer > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    background: linear-gradient(90deg, #C9A66B, #FFD966, #C9A66B);
+    margin: 80px 0;
+    z-index: 3;
+}
+
+#ReservationsContainer > div:last-child {
+    border-bottom: none;
+}

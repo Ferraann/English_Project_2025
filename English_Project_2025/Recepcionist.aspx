@@ -49,10 +49,58 @@
 
                 
                 </div>
+
+                <div id="search-user" class="action-panel">
+                    <h2 class="section-title">Personal Data</h2>
+
+                    <div class="searcher">
+                        <asp:TextBox ID="searcherTextBox" runat="server" Placeholder="Search a user by email..."></asp:TextBox>
+                        <asp:Button class="searchBtn" runat="server" ImageUel="img/search.png" OnClick="searchBtn" />
+                    </div>
+
+                     <div class="info-container">           
+                        <div class="name">
+                        <h3>Name:</h3>
+                        <asp:Label ID="LabelClientName" Text="i" runat="server"></asp:Label>
+                    </div>
+
+                    <div class="surname">
+                        <h3>Surname:</h3>
+                        <asp:Label ID="LabelClientSurname" Text="i" runat="server"></asp:Label>
+                    </div>
+
+                    <div class="DOB">
+                        <h3>Date of born:</h3>
+                        <asp:Label ID="LabelClientDOB" Text="i" runat="server"></asp:Label>
+                    </div>
+
+                    <div class="phone">
+                        <h3>Phone:</h3>
+                        <asp:Label ID="LabelClientPhone" Text="i" runat="server"></asp:Label>
+                    </div>
+
+                    <div class="address">
+                        <h3>Address:</h3>
+                        <asp:Label ID="LabelClientAddress" Text="i" runat="server"></asp:Label>
+                    </div>
+
+                    <div class="email">
+                        <h3>Email:</h3>
+                        <asp:Label ID="LabelClientEmail" Text="i" runat="server"></asp:Label>
+                    </div>        
+                    </div>
+
+                    <span class="separator"></span>
+       
+
+                    <h2 class="section-title">My reservations</h2>
+
+                    <div class="info-container_2">
+                        <div id="ReservationsContainer" runat="server"></div>
+                    </div>
+                </div>
+                
             </form>
-            <div id="search-user" class="action-panel">
-                add reservation
-            </div>
         </div> 
     </main>
 

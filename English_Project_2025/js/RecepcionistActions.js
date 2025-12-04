@@ -7,7 +7,7 @@ const panelSearchUser = document.getElementById("search-user");
 
 
 actionAddUser.style.textDecoration = "underline";
-panelAddUser.style.display = "flex";
+panelAddUser.style.display = "grid";
 panelSearchUser.style.display = "none";
 
 
@@ -25,7 +25,7 @@ actionAddUser.addEventListener('click', function (e) {
     hideAllPanels();
 
     actionAddUser.style.textDecoration = "underline";
-    panelAddUser.style.display = "flex";
+    panelAddUser.style.display = "grid";
 })
 
 
@@ -35,5 +35,5 @@ actionSearchUser.addEventListener('click', function (e) {
     hideAllPanels();
 
     actionSearchUser.style.textDecoration = "underline";
-    panelSearchUser.style.display = "flex";
+    panelSearchUser.style.display = "grid";
 })
