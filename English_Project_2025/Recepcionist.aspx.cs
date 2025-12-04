@@ -68,7 +68,7 @@ namespace English_Project_2025
             }
         }
 
-        public void searchBtn(object sender, EventArgs e)
+        public void SearchButton_Click(object sender, EventArgs e)
         {
 
         }

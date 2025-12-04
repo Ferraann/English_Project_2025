@@ -54,10 +54,9 @@
                     <h2 class="section-title">Personal Data</h2>
 
                     <div class="searcher">
-                        <asp:TextBox ID="searcherTextBox" runat="server" Placeholder="Search a user by email..."></asp:TextBox>
-                        <asp:Button class="searchBtn" runat="server" ImageUel="img/search.png" OnClick="searchBtn" />
+                        <asp:TextBox ID="searcherTextBox" runat="server" Placeholder="Search a user"></asp:TextBox>
+                        <a href="#"> <img src="img/search.png" alt="Search icon" /> </a>
                     </div>
-
                      <div class="info-container">           
                         <div class="name">
                         <h3>Name:</h3>

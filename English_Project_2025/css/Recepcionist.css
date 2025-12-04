@@ -136,21 +136,25 @@ input:last-child {
     height: 50%;
 }
 
-#searcherTextBox {
+.searcher input {
     width: 400px;
 }
 
-.searchBtn {
+.searcher a {
     background-color: beige;
     padding: 16px 16px;
     border: 2px solid gold;
     border-radius: 5px;
-    width: 20px;
 }
 
-.searchBtn:hover {
+.searcher a:hover {
     background-color: #fff;
     transition: background-color 0.3s ease;
+}
+
+.searcher a img {
+    height: 90%;
+    width: auto;
 }
 
 
