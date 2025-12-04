@@ -23,8 +23,15 @@
 
     <main>  
         <div class="content_container">
-            <h3>Recepcionist Dashboard</h3>
+            <h2>Recepcionist Dashboard</h2>
             <p>Select an action:</p>
+            <div class="actions-container">
+                <h4>Add User</h4>
+                <span class="separator"></span>
+                <h4>Add Reservation To User</h4>
+                <span class="separator"></span>
+                <h4>Delete User</h4>
+            </div>
             <div class="info-container">
 
             </div>

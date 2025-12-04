@@ -73,6 +73,7 @@
     <Content Include="css\Homepage.css" />
     <Content Include="css\HomepageLoged.css" />
     <Content Include="css\Login.css" />
+    <Content Include="css\Recepcionist.css" />
     <Content Include="css\Structure_Page.css" />
     <Content Include="HomepageLoged.aspx" />
     <Content Include="Homepage.aspx" />
