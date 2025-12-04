@@ -28,16 +28,8 @@
             <div class="actions-container">
                 <a id="action-add-user" href="#"><h4>Add User</h4></a>
                 <span class="separator"></span>
-
-                <a id="action-add-reservation" href="#"><h4>Add Reservation To User</h4></a>                
-                <span class="separator"></span>
-
-                <a id="action-delete-user" href="#"><h4>Delete User</h4></a>
+                <a id="action-search-user" href="#"><h4>Search User</h4></a>
             </div>
-
-
-
-
 
             <div id="add-user" class="action-panel">
 
@@ -57,16 +49,8 @@
                 </form>
             </div>
 
-
-
-
-
-
-            <div id="add-reservation" class="action-panel">
+            <div id="search-user" class="action-panel">
                 add reservation
-            </div>
-            <div id="delete-user" class="action-panel">
-                delete user
             </div>
         </div> 
     </main>

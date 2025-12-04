@@ -1,27 +1,22 @@
 ﻿
 const actionAddUser = document.getElementById('action-add-user');
-const actionAddReservation = document.getElementById('action-add-reservation');
-const actionDeleteUser = document.getElementById('action-delete-user');
+const actionSearchUser = document.getElementById('action-search-user');
 
 const panelAddUser = document.getElementById("add-user");
-const panelAddReservation = document.getElementById("add-reservation");
-const panelDeleteUser = document.getElementById("delete-user");
+const panelSearchUser = document.getElementById("search-user");
 
 
 actionAddUser.style.textDecoration = "underline";
 panelAddUser.style.display = "flex";
-panelAddReservation.style.display = "none";
-panelDeleteUser.style.display = "none";
+panelSearchUser.style.display = "none";
 
 
 function hideAllPanels() {
     panelAddUser.style.display = "none";
-    panelAddReservation.style.display = "none";
-    panelDeleteUser.style.display = "none";
+    panelSearchUser.style.display = "none";
 
     actionAddUser.style.textDecoration = "none";
-    actionAddReservation.style.textDecoration = "none";
-    actionDeleteUser.style.textDecoration = "none";
+    actionSearchUser.style.textDecoration = "none";
 }
 
 actionAddUser.addEventListener('click', function (e) {
@@ -34,21 +29,11 @@ actionAddUser.addEventListener('click', function (e) {
 })
 
 
-actionAddReservation.addEventListener('click', function (e) {
+actionSearchUser.addEventListener('click', function (e) {
     e.preventDefault();
 
     hideAllPanels();
 
-    actionAddReservation.style.textDecoration = "underline";
-    panelAddReservation.style.display = "flex";
-})
-
-
-actionDeleteUser.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    hideAllPanels();
-
-    actionDeleteUser.style.textDecoration = "underline";
-    panelDeleteUser.style.display = "flex";
+    actionSearchUser.style.textDecoration = "underline";
+    panelSearchUser.style.display = "flex";
 })
