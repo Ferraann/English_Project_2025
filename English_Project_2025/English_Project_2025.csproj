@@ -73,6 +73,7 @@
     <Content Include="css\Homepage.css" />
     <Content Include="css\HomepageLoged.css" />
     <Content Include="css\Login.css" />
+    <Content Include="css\Recepcionist.css" />
     <Content Include="css\Structure_Page.css" />
     <Content Include="HomepageLoged.aspx" />
     <Content Include="Homepage.aspx" />
@@ -80,6 +81,7 @@
     <Content Include="img\header-img.png" />
     <Content Include="img\main-img.jpg" />
     <Content Include="img\logo.png" />
+    <Content Include="js\RecepcionistActions.js" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="Recepcionist.aspx" />

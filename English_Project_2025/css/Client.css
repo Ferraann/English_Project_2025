@@ -19,7 +19,7 @@ li a img {
 }
 
 .content_container {
-    color: #000000;
+    color: #000;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,23 +34,20 @@ li a img {
 }
 
 .info-container {
-    
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px 80px;
     margin-top: 25px;
 }
 
-    .info-container div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1px;
-        padding: 8px;
-        border-radius: 16px;
-    }
-
-
+.info-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    padding: 8px;
+    border-radius: 16px;
+}
 
 .separator {
     width: 90%;
