@@ -67,5 +67,10 @@ namespace English_Project_2025
                 LabelMessage.Text = "Adding user failed: " + ex.Message;
             }
         }
+
+        public void SearchButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,9 +31,10 @@
                 <a id="action-search-user" href="#"><h4>Search User</h4></a>
             </div>
 
-            <div id="add-user" class="action-panel">
+            <form id="form1" runat="server">
+                <div id="add-user" class="action-panel">
 
-                <form id="form1" runat="server">
+                
                     <asp:TextBox ID="NameTextBox" runat="server" Placeholder="Name"></asp:TextBox>
                     <asp:TextBox ID="SurnameTextBox" runat="server" Placeholder="Surname"></asp:TextBox>
                     <asp:TextBox ID="DOBTextBox" runat="server" Placeholder="Date of born"></asp:TextBox>
@@ -46,9 +47,9 @@
                     <asp:Button ID="Button1" class="btn-add-user" runat="server" Text="+ Add User" OnClick="Button1_Click" />
                     <asp:Label ID="LabelMessage" runat="server"></asp:Label>
 
-                </form>
-            </div>
-
+                
+                </div>
+            </form>
             <div id="search-user" class="action-panel">
                 add reservation
             </div>
