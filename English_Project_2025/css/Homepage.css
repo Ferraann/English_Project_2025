@@ -54,7 +54,7 @@ section {
 .section-title {
     font-size: 2rem;
     text-align: center;
-    color: var(--navy);
+
     margin: 60px 0 50px;
     position: relative;
     display: inline-block;
@@ -97,7 +97,7 @@ section {
 ========================================= */
 
 .btn-primary {
-    background-color: peru;
+    background-color: #C9A66B;
     font-size: 16px;
     color: #fff;
     padding: 16px 32px;
@@ -206,7 +206,7 @@ section {
     margin-bottom: 25px;
     border-radius: 15px;
     text-align: center;
-    background-color: var(--gold);
+    background-color: #C9A66B;
 }
 
 .room-img {
@@ -349,7 +349,9 @@ section {
 
 
 
-
+.location{
+    margin-bottom:auto;
+}
 /* =========================================
    UBICACIÓN
 ========================================= */
