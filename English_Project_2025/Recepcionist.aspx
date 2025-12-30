@@ -89,10 +89,7 @@
                         <h3>Email:</h3>
                         <asp:Label ID="LabelClientEmail" Text="i" runat="server"></asp:Label>
                     </div>        
-                    </div>
-
-                    <span class="separator" id="SeparatorDiv" runat="server"></span>
-       
+                    </div>       
 
                     <h2 class="section-title" id="H2ReservationsTitle" runat="server">My reservations</h2>
 

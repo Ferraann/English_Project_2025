@@ -1,35 +1,13 @@
-﻿/* =========================================
-   PALETA DE COLORES
-========================================= */
-:root {
-    --navy: #0A1C2E;
-    --gold: #C9A66B;
-    --white: #ffffff;
-    --light: #f5f5f5;
-}
-
-/* =========================================
-   RESET GENERAL
-========================================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+﻿
 body {
     font-family: Arial, sans-serif;
-    background: var(--white);
-    color: var(--navy);
+    background: #ffffff;
+    color: #0A1C2E;
     overflow-x: hidden;
 }
 
-/* =========================================
-   REPARAR PROBLEMA DE LAYOUT HORIZONTAL
-========================================= */
-
 main {
-    display: block !important;
+    display: block;
     width: 100%;
     background-color: beige;
 }
@@ -45,11 +23,6 @@ section {
     width: 100%;
 }
 
-/* =========================================
-   TITULOS GENERALES
-========================================= */
-
-/* ==== TITULOS CON DOS LINEAS DORADAS METÁLICAS ==== */
 
 .section-title {
     font-size: 2rem;
@@ -64,7 +37,6 @@ section {
     transform: translateX(-50%);
 }
 
-    /* Línea superior */
     .section-title::before {
         content: "";
         position: absolute;
@@ -77,7 +49,6 @@ section {
         box-shadow: 0 0 6px rgba(201, 166, 107, 0.6);
     }
 
-    /* Línea inferior */
     .section-title::after {
         content: "";
         position: absolute;
@@ -90,11 +61,6 @@ section {
         box-shadow: 0 0 6px rgba(201, 166, 107, 0.6);
     }
 
-
-
-/* =========================================
-   BOTONES
-========================================= */
 
 .btn-primary {
     background-color: #C9A66B;
@@ -112,10 +78,6 @@ section {
     transition: background-color 0.3s ease;
 }
 
-/* =========================================
-   SOBRE EL HOTEL
-========================================= */
-
 .about {
     text-align: center;
 }
@@ -127,9 +89,6 @@ section {
     margin-bottom: 25px;
 }
 
-/* =========================================
-   SERVICIOS
-========================================= */
 
 .features {
     background-color: beige;
@@ -144,7 +103,7 @@ section {
 }
 
 .feature-card {
-    background: var(--white);
+    background: #ffffff;
     border-radius: 18px;
     padding: 25px 20px 35px;
     text-align: center;
@@ -163,11 +122,10 @@ section {
 }
 
 
-/* Barra decorativa elegante */
 .feature-bar {
     width: 60px;
     height: 6px;
-    background: var(--gold);
+    background: #C9A66B;
     border-radius: 4px;
     margin: 0 auto 20px;
 }
@@ -175,11 +133,11 @@ section {
 .feature-card:hover {
     transform: translateY(-6px);
     box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
-    border-color: var(--gold);
+    border-color: #C9A66B;
 }
 
 .feature-card h3 {
-    color: var(--navy);
+    color: #0A1C2E;
     font-size: 1.3rem;
     margin-bottom: 10px;
 }
@@ -190,9 +148,6 @@ section {
 }
 
 
-/* =========================================
-   HABITACIONES
-========================================= */
 .room-description {
     display: flex;
     gap: 30px;
@@ -240,9 +195,6 @@ section {
 }
 
 
-/* =========================================
-   EXPERIENCIAS
-========================================= */
 
 .exp-card {
     height: 220px;
@@ -286,27 +238,24 @@ section {
 }
 
 
-/* =========================================
-   RESEÑAS
-========================================= */
 .reviews {
     background-color: beige;
     padding: 60px 10%;
 }
 
-/* Valoración media centrada y separada */
+
 .reviews-average {
     text-align: center;
-    margin-bottom: 50px; /* espacio grande antes de las tarjetas */
+    margin-bottom: 50px;
     font-size: 1.2rem;
     color: var(--navy);
 }
 
 .stars-average {
-    font-size: 1.5rem; /* estrellas más grandes */
-    color: var(--gold);
+    font-size: 1.5rem;
+    color: #C9A66B;
     display: inline-block;
-    margin-bottom: 8px; /* separación entre estrellas y texto */
+    margin-bottom: 8px;
 }
 
 .reviews-average p {
@@ -315,26 +264,25 @@ section {
     margin: 0;
 }
 
-/* Grid de reseñas */
+
 .reviews-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
-    justify-items: center; /* centra las tarjetas */
+    justify-items: center;
 }
 
-/* Tarjetas de reseñas */
 .review-card {
-    background: var(--white);
+    background: #ffffff;
     padding: 25px 20px;
-    border-left: 4px solid var(--gold); /* detalle premium */
+    border-left: 4px solid #C9A66B;
     border-radius: 12px;
     text-align: left;
-    box-shadow: 0px 2px 6px rgba(0,0,0,0.05); /* sombra MUY suave */
-    transition: background .3s ease; /* solo cambia el fondo al hover */
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
+    transition: background .3s ease; 
 }
 
-    /* Hover elegante: solo cambia el fondo */
+
 .review-card:hover {
     background: #f9d886;
 }
@@ -352,9 +300,7 @@ section {
 .location{
     margin-bottom:auto;
 }
-/* =========================================
-   UBICACIÓN
-========================================= */
+
 
 .map-container {
     width: 100%;

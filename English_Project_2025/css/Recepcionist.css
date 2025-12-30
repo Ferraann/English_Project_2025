@@ -105,6 +105,7 @@ input:last-child {
     border: none;
 }
 
+
 .btn-add-user {
     background-color: #C9A66B;
     font-size: 16px;
@@ -129,6 +130,7 @@ input:last-child {
 
 .searcher {
     display: flex;
+    margin: 30px auto;
     justify-content: center;
     gap: 30px;
     width: 600px;
@@ -175,6 +177,10 @@ input:last-child {
 
 .info-container {
     display: none;
+}
+
+#H2ReservationsTitle {
+    margin-top: 50px;
 }
 
 .reservation-card {

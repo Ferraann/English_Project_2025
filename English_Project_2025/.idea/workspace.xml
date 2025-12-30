@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d5a08d2-8253-4a51-808e-8452fdabab91" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/img/search.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage.aspx" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage.aspx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomepageLoged.aspx" beforeDir="false" afterPath="$PROJECT_DIR$/HomepageLoged.aspx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Recepcionist.aspx" beforeDir="false" afterPath="$PROJECT_DIR$/Recepcionist.aspx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recepcionist.aspx.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Recepcionist.aspx.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Recepcionist.aspx.designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Recepcionist.aspx.designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/Homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/Homepage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/Recepcionist.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/Recepcionist.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/RecepcionistActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/RecepcionistActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/Structure_Page.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/Structure_Page.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,16 +31,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev__Ferran&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Usuario/source/repos/English_Project_2025/English_Project_2025&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dev__Ferran",
+    "last_opened_file_path": "C:/xampp/htdocs/ProyectoBiometria_2",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -55,6 +58,7 @@
       <updated>1764866590231</updated>
       <workItem from="1764866591310" duration="36000" />
       <workItem from="1764878779820" duration="16000" />
+      <workItem from="1764934522578" duration="71000" />
     </task>
     <servers />
   </component>

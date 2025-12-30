@@ -12,7 +12,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* HEADER */
 header {
     height: 80px;
     width: 100%;
@@ -54,20 +53,18 @@ nav ul li {
     background-color: burlywood;
     transition: background-color 0.3s ease;
 }
-/* END HEADER */
 
 
-/* MAIN */
+
+
 main {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     width: 100%;
 }
-/* END MAIN */
 
 
-/* FOOTER */
 footer {
     height: 50px;
     width: 100%;
@@ -77,4 +74,4 @@ footer {
     background-color: #C9A66B;
     color: #fff
 }
-/* END FOOTER */
+

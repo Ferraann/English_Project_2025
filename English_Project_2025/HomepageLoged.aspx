@@ -25,7 +25,7 @@
 
 <main>
 
-    <!-- SOBRE EL HOTEL -->
+
     <section class="about">
         <div class="about-img"></div>
         <div class="about-text">
@@ -38,7 +38,7 @@
         </div>
     </section>
 
-    <!-- SERVICIOS / ESPACIOS -->
+
 <section class="features">
     <h2 class="section-title">Our Spaces & Amenities</h2>
 
@@ -72,7 +72,6 @@
 </section>
 
 
-    <!-- HABITACIONES -->
     <section class="rooms">
         <h2 class="section-title">Our Rooms</h2>
         <div class="room-description">
@@ -96,7 +95,7 @@
         </div>
     </section>
 
-    <!-- EXPERIENCIAS -->
+
     <section class="experiences">
         <h2 class="section-title">Unforgettable Experiences</h2>
 
@@ -106,11 +105,10 @@
         <div class="exp-card exp4">Exclusive Wine Tastings</div>
     </section>
 
-   <!-- RESEÑAS -->
+
     <section class="reviews">
     <h2 class="section-title">Hear from Our Guests</h2>
 
-    <!-- Valoración media centrada -->
     <div class="reviews-average">
         <div class="stars-average">⭐⭐⭐⭐⭐</div>
         <p>5/5 – based on 50,000 reviews</p>
@@ -143,7 +141,6 @@
 
 
 
-    <!-- UBICACIÓN -->
    <section class="location">
     <h2 class="section-title">Our Location</h2>
 

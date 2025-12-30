@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SQLite;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Services.Description;
@@ -26,11 +27,9 @@ namespace English_Project_2025
 
         public void Button1_Click(object sender, EventArgs e)
         {
-            // Limpiamos el mensaje de error anterior
             LabelMessage.Text = "";
             LabelMessage.ForeColor = System.Drawing.Color.Red;
 
-            // 1. Recopilar datos
             string nameField = NameTextBox.Text.Trim();
             string surnameField = SurnameTextBox.Text.Trim();
             string DOBField = DOBTextBox.Text.Trim();
@@ -40,63 +39,9 @@ namespace English_Project_2025
             string emailField = EmailTextBox.Text.Trim();
             string passwordField = PasswordTextBox.Text.Trim();
 
-            // ----------------------------------------------------
-            // 2. VALIDACIÓN REGEX
-            // ----------------------------------------------------
-
-            // Patrones Regex Estándar
-            // Email: Valida un formato de correo electrónico básico
-            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
-
-            // Mobile: Valida 9 a 15 dígitos opcionales con '+' y espacios (ajusta según el país)
-            string phonePattern = @"^(\+?\d{1,3}[\s-]?)?(\d{9,15})$";
-
-            // Patrón para asegurar que el Nombre y Apellido no están vacíos y solo contienen letras
-            string textPattern = @"^[A-Za-z\s]+$";
-
-            // Validar Nombre
-            if (!Regex.IsMatch(nameField, textPattern) || nameField.Length < 2)
-            {
-                LabelMessage.Text = "❌ Invalid Name. Use only letters and spaces (min 2 chars).";
-                return;
-            }
-
-            // Validar Apellido
-            if (!Regex.IsMatch(surnameField, textPattern) || surnameField.Length < 2)
-            {
-                LabelMessage.Text = "❌ Invalid Surname. Use only letters and spaces (min 2 chars).";
-                return;
-            }
-
-            // Validar Email
-            if (!Regex.IsMatch(emailField, emailPattern))
-            {
-                LabelMessage.Text = "❌ Invalid Email format.";
-                return;
-            }
-
-            // Validar Teléfono
-            // Usamos !IsMatch para verificar si NO cumple el formato
-            if (!Regex.IsMatch(phoneField, phonePattern))
-            {
-                LabelMessage.Text = "❌ Invalid Phone Number format (Use 9 to 15 digits).";
-                return;
-            }
-
-            // Validar Contraseña (Ejemplo simple: min 6 caracteres)
-            if (passwordField.Length < 6)
-            {
-                LabelMessage.Text = "❌ Password must be at least 6 characters long.";
-                return;
-            }
-
-            // ----------------------------------------------------
-            // 3. CREACIÓN E INSERCIÓN DE USUARIO
-            // ----------------------------------------------------
 
             try
             {
-                // El resto del código permanece igual, pero ya sanitizado.
                 string BDpath = Server.MapPath("~/bin/users.db");
 
                 using (SQLiteConnection conn = new SQLiteConnection("Data Source=" + BDpath + ";Version=3;"))
@@ -106,10 +51,8 @@ namespace English_Project_2025
                     User user = new User(nameField, surnameField, DOBField, addressField, phoneField,
                                  emailField, passwordField, profileField);
 
-                    // Asegúrate de que AddUser esté definido como static en la clase User
                     user.AddUser(user);
 
-                    // 4. Limpieza de campos
                     NameTextBox.Text = "";
                     SurnameTextBox.Text = "";
                     DOBTextBox.Text = "";
@@ -119,8 +62,7 @@ namespace English_Project_2025
                     EmailTextBox.Text = "";
                     PasswordTextBox.Text = "";
 
-                    // Mensaje de éxito
-                    LabelMessage.Text = "✅ User added successfully!";
+                    LabelMessage.Text = "User added successfully!";
                     LabelMessage.ForeColor = System.Drawing.Color.Green;
 
                     conn.Close();
@@ -128,7 +70,6 @@ namespace English_Project_2025
             }
             catch (Exception ex)
             {
-                // Este catch ahora solo atrapa errores de BD o lógica de negocios
                 LabelMessage.Text = "Adding user failed: " + ex.Message;
                 LabelMessage.ForeColor = System.Drawing.Color.Red;
             }
@@ -137,6 +78,13 @@ namespace English_Project_2025
         public void searchBtn_Click(object sender, EventArgs e)
         {
             string searchEmail = searcherTextBox.Text.Trim();
+            LabelMessage.Text = "";
+
+            H2SectionTitle.Style["display"] = "none";
+            H2ReservationsTitle.Style["display"] = "none";
+            PanelUserInfo.Style["display"] = "none";
+            PanelReservations.Style["display"] = "none";
+            ReservationsContainer.InnerHtml = string.Empty;
 
             if (string.IsNullOrEmpty(searchEmail))
             {
@@ -157,17 +105,38 @@ namespace English_Project_2025
                     LabelClientAddress.Text = foundUser.Address;
                     LabelClientEmail.Text = foundUser.Email;
 
+                    int userId = foundUser.Id_user;
+
+                    List<Reservation> userReservations = English_Project_2025.Reservation.GetReservationsByUser(userId);
+
+                    StringBuilder html = new StringBuilder();
+
+                    if (userReservations != null && userReservations.Count > 0)
+                    {
+                        foreach (var r in userReservations)
+                        {
+                            html.Append("<div class='reservation-card'>");
+                            html.Append($"<p><strong>ID Reservation:</strong> {r.id_reservation}</p>");
+                            html.Append($"<p><strong>Check-in:</strong> {r.check_in_date}</p>");
+                            html.Append($"<p><strong>Check-out:</strong> {r.check_out_date}</p>");
+                            html.Append($"<p><strong>Room type:</strong> {r.type_of_room}</p>");
+                            html.Append($"<p><strong>Total cost:</strong> {r.total_cost}€</p>");
+                            html.Append("</div>");
+                        }
+                    }
+                    else
+                    {
+                        html.Append("<p>This user has no active reservations.</p>");
+                    }
+
+                    ReservationsContainer.InnerHtml = html.ToString();
+
                     PanelUserInfo.Style["display"] = "grid";
-
-                    SeparatorDiv.Style["display"] = "block"; 
-
                     H2SectionTitle.Style["display"] = "block";
-
+                    H2ReservationsTitle.Style["display"] = "block";
                     PanelReservations.Style["display"] = "block";
 
-
-
-                    LabelMessage.Text = $"User '{foundUser.Name} {foundUser.Surname}' found.";
+                    LabelMessage.Text = $"User '{foundUser.Name} {foundUser.Surname}' found. Showing {userReservations.Count} reservations.";
                 }
                 else
                 {
@@ -177,6 +146,10 @@ namespace English_Project_2025
             catch (Exception ex)
             {
                 LabelMessage.Text = "Search failed due to a database error: " + ex.Message;
+                H2SectionTitle.Style["display"] = "none";
+                H2ReservationsTitle.Style["display"] = "none";
+                PanelUserInfo.Style["display"] = "none";
+                PanelReservations.Style["display"] = "none";
             }
         }
     }
