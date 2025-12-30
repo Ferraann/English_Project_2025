@@ -11,7 +11,9 @@ namespace English_Project_2025
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Limpiar la sesion
             Session.Clear();
+            // Redirigir a la homepage
             Response.Redirect("Homepage.aspx");
         }
     }

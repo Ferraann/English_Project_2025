@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Log out Hospital | English Project 2025 @ Javier Acevedo AND Ferran Sansaloni</title>
+    <title>Log out Hotel | English Project 2025 @ Javier Acevedo AND Ferran Sansaloni</title>
 </head>
 <body>
 </body>
