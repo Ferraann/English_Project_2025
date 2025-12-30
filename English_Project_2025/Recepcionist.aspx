@@ -24,7 +24,10 @@
 
     <main>  
         <div class="content_container">
+            <!-- Título -->
             <h2>Recepcionist Dashboard</h2>
+            <!-- Contenedor del boton de add user y search user -->
+            <!-- Tenemos un id para cada <a>, en el js pillaremos ese id y lo usaremos para mostrar un div o otro -->
             <div class="actions-container">
                 <a id="action-add-user" href="#"><h4>Add User</h4></a>
                 <span class="separator"></span>
@@ -33,9 +36,9 @@
 
             <form id="form1" runat="server">
                 <asp:HiddenField ID="ActivePanel" runat="server" Value="Add" />
-                <div id="add-user" class="action-panel">
 
-                
+                <!-- div del Add User -->
+                <div id="add-user" class="action-panel">
                     <asp:TextBox ID="NameTextBox" runat="server" Placeholder="Name"></asp:TextBox>
                     <asp:TextBox ID="SurnameTextBox" runat="server" Placeholder="Surname"></asp:TextBox>
                     <asp:TextBox ID="DOBTextBox" runat="server" Placeholder="Date of born"></asp:TextBox>
@@ -45,26 +48,32 @@
                     <asp:TextBox ID="EmailTextBox" runat="server" Placeholder="Email"></asp:TextBox>
                     <asp:TextBox ID="PasswordTextBox" runat="server" Placeholder="Password"></asp:TextBox>
 
+                    <!-- id button y un onclick. Cuando se haga click en el boton se ejecutara Button1_Click -->
                     <asp:Button ID="Button1" class="btn-add-user" runat="server" Text="+ Add User" OnClick="Button1_Click" />
                     <asp:Label ID="LabelMessage" runat="server"></asp:Label>
 
-                
                 </div>
 
+                <!-- div de Search User -->
                 <div id="search-user" class="action-panel">
                     <div class="searcher">
                         <asp:TextBox ID="searcherTextBox" runat="server" Placeholder="Search a user"></asp:TextBox>
                         <asp:Button ID="SearchButton" CssClass="searchBtn" runat="server" Text="" OnClick="searchBtn_Click" />
-                </div>
+                    </div>
 
+                    <!-- Titulo -->
                     <h2 class="section-title" id="H2SectionTitle" runat="server">Personal Data</h2> 
 
+                    <!-- Apartados: -->
+                    <!-- Nombre -->
                      <div class="info-container" id="PanelUserInfo" runat="server">           
                         <div class="name">
                         <h3>Name:</h3>
+                            <!--  -->
                         <asp:Label ID="LabelClientName" Text="i" runat="server"></asp:Label>
                     </div>
-
+                    
+                    <!-- Apellidos -->
                     <div class="surname">
                         <h3>Surname:</h3>
                         <asp:Label ID="LabelClientSurname" Text="i" runat="server"></asp:Label>
@@ -84,7 +93,7 @@
                         <h3>Address:</h3>
                         <asp:Label ID="LabelClientAddress" Text="i" runat="server"></asp:Label>
                     </div>
-
+                    <!-- Email -->
                     <div class="email">
                         <h3>Email:</h3>
                         <asp:Label ID="LabelClientEmail" Text="i" runat="server"></asp:Label>
